@@ -60,7 +60,7 @@ contract SomeContract {
 
   uint[] public parts_quantity;
 
-  mapping (bytes32 => uint number) parts_mapping;
+  mapping (bytes32 => uint) parts_mapping;
 
   function addparts(bytes32 name, uint quantity) only_OEM {
 
@@ -68,9 +68,9 @@ contract SomeContract {
 
   }
 
-  function display(bytes32 part_name) constant returns(uint[]) {
+  function display(bytes32 part_name) constant returns(uint) {
 
-    return parts_mapping[part_name].number;
+    return parts_mapping[part_name];
 
   }
 
