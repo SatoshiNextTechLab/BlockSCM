@@ -17,6 +17,12 @@ contract SomeContract {
 
   }
 
+  event TheOemAddedAnItem(address oemaddress,bytes32 itemname,uint quantityofitem);
+  event TheManufacturerRequestedForParts(bytes32 nameofpart,uint numberofparts);
+  event TheManufacturerRequestedForMoreParts(bytes32 nameofthepart,uint numberoftheparts);
+  event TheOemGotPaid(address _oemsaddress,uint moneyinthepoolforoem);
+  event TheManufacturerRefundedTheDefectiveItem(bytes32 defectiveitem,uint numberofdefective);
+
   struct auto_industry {
 
     uint typ;
@@ -79,6 +85,7 @@ contract SomeContract {
     time_mapping[name]=time_now;
     price_mapping[name]=price;
     hashing_item[name]=sha3(name,ids,time_now);
+    TheOemAddedAnItem(msg.sender,name,quantity);
 
   }
 
@@ -114,16 +121,29 @@ contract SomeContract {
   uint pooltime;
 
   // till now it is used to remove the number of a specific item in the oems manufactured list
-  function use_OEM_Parts(bytes32 name_of_part, uint how_many, uint id_of_item) auth_part(name_of_part , id_of_item) payable returns (uint) {
+  function buy_part_amount_show (bytes32 name_of_part , uint how_many) constant returns(uint) {
 
-    parts_mapping[name_of_part] = parts_mapping[name_of_part] - how_many;
     uint amount = how_many * price_mapping[name_of_part];
-    this.transfer(amount);
-    pooltime=now;
-    return parts_mapping[name_of_part];
+    return amount;
 
   }
 
+  // checking for authenticity of parts and paying temporarily to the pool
+  function use_OEM_Parts(bytes32 name_of_part, uint how_many, uint id_of_item) auth_part(name_of_part , id_of_item) payable {
+
+    if( parts_mapping[name_of_part] < how_many ){
+      TheManufacturerRequestedForMoreParts(name_of_part,how_many);
+    }
+
+    parts_mapping[name_of_part] = parts_mapping[name_of_part] - how_many;
+    uint amount = msg.value;
+    this.transfer(amount);
+    pooltime=now;
+
+    TheManufacturerRequestedForParts(name_of_part,how_many);
+
+
+  }
 
   //give the amount present in the pool
   function getPoolMoney() constant returns (uint){
@@ -133,18 +153,21 @@ contract SomeContract {
   }
 
   //for giving back defective items,after this manufacturer gets his money and oem takes the defective part
-  function defective(bytes32 _name_of_part, uint no_of_pieces) only_AUTO_MANU() payable {
+  function defective(bytes32 _name_of_part, uint no_of_pieces) only_AUTO_MANU {
 
     uint __amount = no_of_pieces * price_mapping[_name_of_part];
     msg.sender.transfer(__amount);
+    TheManufacturerRefundedTheDefectiveItem(_name_of_part,no_of_pieces);
 
   }
 
   //by this function oem can take out money out of the pool to his account after 10 hrs
   function pay_to_OEM() payable only_OEM() {
 
-    if(now-pooltime>36000)
-    msg.sender.transfer(this.balance);
+    if(now-pooltime > 36000){
+      TheOemGotPaid(msg.sender, this.balance);
+      msg.sender.transfer(this.balance);
+    }
 
   }
 
