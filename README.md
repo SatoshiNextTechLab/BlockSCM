@@ -17,7 +17,7 @@ The Automobile industry's supply chain is huge logistical arrangment that consum
 | Problems | How our solution solves them |
 | --- | --- |
 | Differential Pricing | Permissioned ledger for confidential transactions between parties |
-| Numerous parties invovled | Consensus between multiple parties is maintained through Smart Contracts |
+| Numerous parties involved | Consensus between multiple parties is maintained through Smart Contracts |
 |  Quality & Compliance issues | All resources |
 | Inevitable disruptions | Digital ledger is free of geographical constraints like natural disasters, socio-economic issues |           
 | Procuring replacements for defective pieces | Smart contract only lets out payments once both parties satisified |
