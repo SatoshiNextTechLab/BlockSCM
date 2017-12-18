@@ -83,6 +83,7 @@ This allows villagers all across India to pool their resources and receive **int
 1. clone repo https://github.com/jangidkrishna/0xSHG.git
 2. cd into TheSpareRoute-master/GUI
 2. npm install .
-3. gulp serve
+3. npm install lite-server --save-dev
+3. npm run dev
 
 ## Built by undergraduates at [Next Tech Lab, SRM University](http://nextech.io/index2.html)
