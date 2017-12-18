@@ -1,0 +1,35 @@
+body {
+  background-color: rgb(211, 242, 174);
+}
+
+.hed {
+  padding: 20px 100px 5px 100px;
+  background-color: teal;
+  color: white;
+  border-bottom: 10px;
+}
+
+.sub-hed {
+  padding: 10px 0px 10px 0px;
+}
+
+.pad-up {
+  padding-top: 10px;
+}
+
+.cont1 {
+  padding: 10px 0px 10px 0px;
+  background-color: rgb(220,80,0);
+  border-radius: 10px;
+}
+
+.cont2 {
+  padding: 10px 0px 10px 0px;
+  background-color: rgb(220,190,0);
+  border-radius: 10px;
+}
+
+.fut {
+  font-size: 13.5px;
+  font-weight: bold;
+}

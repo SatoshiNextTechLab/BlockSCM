@@ -1,0 +1,127 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Spare Route Directory</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <link rel='shortcut icon' type='image/x-icon' href='img/favicon.png' />
+    <script src="./node_modules/web3/dist/web3.min.js"></script>
+
+</head>
+
+<!--
+<div class="loader"><center>
+  <img id="loader" src="https://loading.io/spinners/double-ring/lg.double-ring-spinner.gif"></center>
+</div> -->
+
+<body>
+    <div class="container-fluid">
+      <div class="well">
+
+      <div class="text-center hed">
+        <h1><img src="img/favicon.png" height="57" width="57">   Decentralized Spare Route Service</h1>
+      </div>
+
+      <br>
+
+      <div class="cont1">
+
+        <div class="text-center sub-hed">
+          <h2> Send Parts to Manufacturer</h2>
+        </div>
+
+        <div class="text-center">
+          <label for="pName" class="control-label">Enter Part's Name :</label>
+          <input id="pName" placeholder="Part Name" type="text">
+        </div>
+
+        <div class="text-center">
+          <label for="pNo" class="control-label">Number of Parts :</label>
+          <input id="pNo" placeholder="#Number" type="int">
+        </div>
+
+        <div class="text-center">
+          <label for="pId" class="control-label">ID of Parts :</label>
+          <input id="pId" placeholder="#Parts-ID" type="int">
+        </div>
+        <div class="text-center pad-up">
+          <button id="sButton">Send Parts</button>
+        </div>
+      </div>
+
+      <br>
+      <div class="cont2">
+
+        <div class="text-center sub-hed">
+          <h3>Use Parts Sent By OEM</h3>
+        </div>
+
+          <div class="text-center">
+            <label for="rName" class="control-label">Enter Part's Name :</label>
+            <input id="rName" placeholder="Part-Name" type="text">
+          </div>
+
+          <div class="text-center">
+            <label for="rNo" class="control-label">Parts Used :</label>
+            <input id="rNo" placeholder="#Number" type="int">
+          </div>
+
+          <div class="text-center pad-up">
+            <button id="rButton">UseParts</button>
+          </div>
+      </div>
+      <br>
+        <div class="cont3 sub-hed">
+          <div class="text-center">
+            <lable for="remP" class="control-label">Remaining Parts :</lable>
+            <input id="remP" placeholder="#Parts-ID" type="text">
+            <button id="remButton">Find</button>
+          </div>
+          </div>
+        </div>
+        <div class="fut text-center">
+          Made with <i class="icon-wrench"></i> By Satoshi Lab, Next Tech
+        </div>
+      </div>
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+        <script src="js/main.js"></script>
+        <script>
+
+        if(typeof web3 !== 'undefined'){
+          web3= new Web3(web3.currentProvider);
+        } else{
+          web3= new Web3(new Web3.providers.HttpProvider(" "))//Add Blockchain Addr here
+        }
+
+        web3.eth.defaultAccount=//Account address
+
+        var ChainCont= web3.eth.contract(//ABI)
+        var Chain=ChainCont.at(//Contract Addr)
+
+        $("sButton").click($("pName").val(),$("pNo").val(),$("pId").val(),(err,res)=>{
+          if(!err){console.log(res)}
+          else{console.log("Error!")}
+        })
+
+        $("rButton").click($("rName").val(),$("rNo").val(),(err,res)=>{
+          if(!err){console.log(res)}
+          else{console.log("Error!")}
+        })
+
+        $("remButton").click($(remP).val(),(err,res)=>{
+          //Alert Here alert(res[0])
+        })
+
+            //Enter it later
+        </script>
+
+  </body>
+  </html>
