@@ -14,19 +14,21 @@ The Automobile industry's supply chain is massive logistical arrangment that is 
 8. **Fraud by Middlemen**: As number of interacting parties increase, there is a proportional increase in middlemen. They lead to fraud and slow down the supply without adding anything to the network.
 9. **Tracking history of any product**: Validating identity vendor and checking for tampering by middlemen is not possible.
 
-### How can blockchains help?
+### How does our solution help?
 
 | Problems | How our solution solves them |
 | --- | --- |
-| Differential Pricing | Permissioned ledger for confidential transactions between parties |
-| Numerous parties invovled | Consensus between multiple parties is maintained through Smart Contracts |
-|  Quality & Compliance issues | Smart contract stores money while all solutions are checked and tested |
-| Inevitable disruptions | Digital ledger is free of geographical constraints like natural disasters, socio-economic issues |           
-| Procuring replacements for defective pieces | Smart contract only lets out payments once both parties satisified |
-| Centralization | Risk of fraud is mitigated by using decentralized nodes for checking delivery status |
-| Fraud by Middlemen | Because of using doubly-signed smart contracts, no financial fraud by middlemen can occur in the system |
-| Tracking supply-chain history of each part | Using our network's merkle trees we can verify vendor identity and validity of product |
+| **Differential Pricing** | Permissioned ledger for confidential transactions between parties |
+| **Numerous parties invovled** | Consensus between multiple parties is maintained through Smart Contracts |
+|  **Quality & Compliance issues** | Smart contract stores money while all solutions are checked and tested |
+| **Inevitable disruptions** | Digital ledger is free of geographical constraints like natural disasters, socio-economic issues |       
+| **Procuring replacements for defective pieces** | Smart contract only lets out payments once both parties satisified |
+| **Centralization** | Risk of fraud is mitigated by using decentralized nodes for checking delivery status |
+| **Fraud by Middlemen** | Because of using doubly-signed smart contracts, no financial fraud by middlemen can occur in the system |
+| **Tracking supply-chain history of each part** | Using our network's merkle trees we can verify vendor identity and validity of product |
 
+
+### GUI interface of our hack
 
 <img src="https://raw.githubusercontent.com/SatoshiNextTechLab/TheSpareRoute/master/GUI%20SCM.png">
 
@@ -82,8 +84,6 @@ All loan request are sorted in increasing order of loan-request amount. Every th
 4. MetaMask
 5. Remix IDE
 6. Web3.js
-7. Aadhar_validator.js
-
 
 ##### Steps to compile in Truffle
 1. git clone https://github.com/jangidkrishna/0xSHG.git
@@ -92,22 +92,10 @@ All loan request are sorted in increasing order of loan-request amount. Every th
 4. truffle console
 5. Interact using Web3.js
 
-
 ##### Steps to compile GUI
 1. clone repo https://github.com/jangidkrishna/0xSHG.git
 2. cd into 0xSHG-master/GUI
 2. npm install .
 3. gulp serve
-
-
-## Possible problems
-1. Adoption : Initial adoption of the system might be slow due to technical illiteracy, but [NABARD's E-Shakti initiative](https://eshakti.nabard.org/Aboutus.aspx) has shown us that once a few villages are tested, [adoption is exponential](https://eshakti.nabard.org/Downloads/EShakti%20Brochure%202017A.pdf).
-
-2. Difference in unit of currency: The solution model requires ether/wei as the basic unit of currency. However, a similar system can be put in place for the government's cryptocurrency LakshmiCoin.
-
-3. Possibility of leftover reserves in pool: After the distribution of loans every 3 months, there is a possibility that some amount of pool money is left unused (all loan requests satisfied). This reserve can be utilised by redistributing it equally into the network.
-
-4. If everyone exits the network at the same time: Though this is extremely improbable, if this happens everyone in the system will have to wait 3 months to receive their money back, with possibility of losses to initial deposit (in case someone defaults and all consentees have exited network).
-
 
 ## Built by undergraduates at [Next Tech Lab, SRM University](http://nextech.io/index2.html)
