@@ -176,12 +176,12 @@ contract SomeContract {
    uint vehicle_id;
    string vehicle_name;
  }
-
+//for assigning the part to the vehicle
  function part_to_vehicle(uint partid,string vehicle_n,uint _vehicle_id) only_AUTO_MANU
  {
    partinauto[partid]=vehicle(_vehicle_id,vehicle_n);
  }
-
+//for finding the location(the vehicle) where the part is installed
  function check_part_location(uint partid) constant returns(uint a,string b)
  {
    a=partinauto[partid].vehicle_id;
