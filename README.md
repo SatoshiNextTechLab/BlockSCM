@@ -12,7 +12,7 @@ The Automobile industry's supply chain is massive logistical arrangment that is 
 4. **Inevitable disruptions**: LEAN "on-demand" manufacturing falls flat in a situations where natural disasters and socio-economic problems are common. For example, Japan (frequently affected by earthquakes) has outsourced most of it's supply chain logistics to other countries.
 7. **Centralization**: A central mediator for parties is required, which centralizes power in the hands of a few and is a gateway to misuse of resources.
 8. **Fraud by Middlemen**: As number of interacting parties increase, there is a proportional increase in middlemen. They lead to fraud and slow down the supply without adding anything to the network.
-9. **Tracking history of any product**: 
+9. **Tracking history of any product**: Validating identity vendor and checking for tampering by middlemen is not possible.
 
 ### How can blockchains help?
 
