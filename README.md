@@ -7,7 +7,7 @@ The Automobile industry's supply chain is huge logistical arrangment that consum
 
 ### The Problem
 1. **Differential Pricing**: Companies prefer keeping their pricings a secret, since this allows them to pay lower prices when outsourcing to developing countries.
-2. **Numerous parties involved**: Mediating between so many parties can be a big problem for logistics-providers, slowing down the delivery of services and creating a large overhead for logistics. Furthermore, a centralized mediator of these parties can misuse power to perfer some parties over others.
+2. **Numerous parties invovled**: Mediating between so many parties can be a big problem for logistics-providers, slowing down the delivery of services and creating a large overhead for logistics. Furthermore, a centralized mediator of these parties can misuse power to perfer some parties over others.
 3. **Quality & Compliance issues**: Procuring a replacement for defective parts is a long-drawn and uncomfortable process.
 4. **Inevitable disruptions**: LEAN "on-demand" manufacturing falls flat in a situations where natural disasters and socio-economic problems are common. For example, Japan (frequently affected by earthquakes) has outsourced most of it's supply chain logistics to other countries.
 7. **Centralization**: A central mediator for parties is required, which centralizes power in the hands of a few and is a gateway to misuse of resources.
@@ -17,7 +17,7 @@ The Automobile industry's supply chain is huge logistical arrangment that consum
 | Problems | How our solution solves them |
 | --- | --- |
 | Differential Pricing | Permissioned ledger for confidential transactions between parties |
-| Numerous parties involved | Consensus between multiple parties is maintained through Smart Contracts |
+| Numerous parties invovled | Consensus between multiple parties is maintained through Smart Contracts |
 |  Quality & Compliance issues | All resources |
 | Inevitable disruptions | Digital ledger is free of geographical constraints like natural disasters, socio-economic issues |           
 | Procuring replacements for defective pieces | Smart contract only lets out payments once both parties satisified |
@@ -38,7 +38,7 @@ This allows villagers all across India to pool their resources and receive **int
 
 ## Architecture and Tech-stack
 
-![System Architecture](https://raw.githubusercontent.com/jangidkrishna/0xSHG/master/architecture.jpg)
+![System Architecture](https://raw.githubusercontent.com/SatoshiNextTechLab/TheSpareRoute/master/GUI%20SCM.png)
 
 
 ### Architecture Modules
