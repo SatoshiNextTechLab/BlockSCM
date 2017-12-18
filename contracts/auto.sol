@@ -170,7 +170,23 @@ contract SomeContract {
     }
 
   }
+ mapping (uint => vehicle) partinauto;
+ struct vehicle
+ {
+   uint vehicle_id;
+   string vehicle_name;
+ }
 
+ function part_to_vehicle(uint partid,string vehicle_n,uint _vehicle_id) only_AUTO_MANU
+ {
+   partinauto[partid]=vehicle(_vehicle_id,vehicle_n);
+ }
+
+ function check_part_location(uint partid) constant returns(uint a,string b)
+ {
+   a=partinauto[partid].vehicle_id;
+   b=partinauto[partid].vehicle_name;
+ }
   function () payable{
 
   }
