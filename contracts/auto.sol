@@ -22,6 +22,7 @@ contract SomeContract {
   event TheManufacturerRequestedForMoreParts(bytes32 nameofthepart,uint numberoftheparts);
   event TheOemGotPaid(address _oemsaddress,uint moneyinthepoolforoem);
   event TheManufacturerRefundedTheDefectiveItem(bytes32 defectiveitem,uint numberofdefective);
+  event TheVehicleIsReadyToBeSendToTheDealer(uint thevehicleid);
 
   struct auto_industry {
 
@@ -176,16 +177,30 @@ contract SomeContract {
    uint vehicle_id;
    string vehicle_name;
  }
+ mapping (uint => uint) completeness;
 //for assigning the part to the vehicle
  function part_to_vehicle(uint partid,string vehicle_n,uint _vehicle_id) only_AUTO_MANU
  {
+   if(completeness[_vehicle_id]==1)
+   {
+     throw;
+   }
+   else
+   {
    partinauto[partid]=vehicle(_vehicle_id,vehicle_n);
+   }
  }
 //for finding the location(the vehicle) where the part is installed
  function check_part_location(uint partid) constant returns(uint a,string b)
  {
    a=partinauto[partid].vehicle_id;
    b=partinauto[partid].vehicle_name;
+ }
+//to set the status of manufactiring complete and is ready to be sent to the dealer
+ function vehicle_assembled(uint vehicle_id_)
+ {
+   completeness[vehicle_id_]=1;
+   TheVehicleIsReadyToBeSendToTheDealer(vehicle_id_);
  }
   function () payable{
 
