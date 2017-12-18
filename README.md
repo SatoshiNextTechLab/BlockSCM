@@ -32,7 +32,7 @@ The Automobile industry's supply chain is massive logistical arrangment that is 
 1. Manufacture requests parts from OEM.
 2. OEM provides all the parts that he produces to the network
 3. If the parts are genuine and working Manufacturer pays to the OEM
-4. Thwn the parts gets added to the car
+4. Then the parts gets added to the car
 
 This protocol has been implemented as a smart contract, and has been optimized for the use-case of automobile supply chains. It has been **deployed and tested** on the Ropsten network. The link to that deployed contract can be [found here](https://ropsten.etherscan.io/tx/0x04410d805f46d05dccd69c5e2a6a7c26d76cbf9403c4792658720df9eb93c1d3).
 
