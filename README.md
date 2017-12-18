@@ -1,5 +1,5 @@
 
-1. [Link to demo-video](https://youtube.com)<br>
+1. [Link to demo-video](https://youtu.be/MDTmZL2sXgk)<br>
 2. [Link to contract deployed & tested on the Ropsten network](https://ropsten.etherscan.io/tx/0x04410d805f46d05dccd69c5e2a6a7c26d76cbf9403c4792658720df9eb93c1d3) <br>
 
 ## BlockSCM - Supply Chain Management 3.0
