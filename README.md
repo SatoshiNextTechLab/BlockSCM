@@ -64,7 +64,7 @@ All loan request are sorted in increasing order of loan-request amount. Every th
 
 
 ##### Steps to compile in Truffle
-1. git clone https://github.com/jangidkrishna/0xSHG.git
+1. git clone https://github.com/SatoshiNextTechLab/TheSpareRoute.git
 2. truffle compile
 3. truffle migrate
 4. truffle console
@@ -72,7 +72,7 @@ All loan request are sorted in increasing order of loan-request amount. Every th
 
 
 ##### Steps to compile GUI
-1. clone repo https://github.com/jangidkrishna/0xSHG.git
+1. clone repo https://github.com/SatoshiNextTechLab/TheSpareRoute.git
 2. cd into 0xSHG-master/GUI
 2. npm install .
 3. gulp serve
