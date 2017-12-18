@@ -73,14 +73,14 @@ This allows villagers all across India to pool their resources and receive **int
 6. Geth
 
 ##### Steps to compile in Truffle
-1. git clone https://github.com/jangidkrishna/0xSHG.git
+1. git clone https://github.com/SatoshiNextTechLab/BlockSCM.git
 2. truffle compile
 3. truffle migrate
 4. truffle console
 5. Interact using Web3.js
 
 ##### Steps to compile GUI
-1. clone repo https://github.com/jangidkrishna/0xSHG.git
+1. clone repo https://github.com/SatoshiNextTechLab/BlockSCM.git
 2. cd into TheSpareRoute-master/GUI
 2. npm install .
 3. npm install lite-server --save-dev
