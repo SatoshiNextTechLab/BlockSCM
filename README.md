@@ -27,10 +27,15 @@ The Automobile industry's supply chain is massive logistical arrangment that is 
 | **Fraud by Middlemen** | Because of using doubly-signed smart contracts, no financial fraud by middlemen can occur in the system |
 | **Tracking supply-chain history of each part** | Using our network's merkle trees we can verify vendor identity and validity of product |
 
+### Protocol
 
-### GUI interface of our hack
+1. Manufacture requests parts from OEM.
+2. 
+3. 
+4. 
 
-<img src="https://raw.githubusercontent.com/SatoshiNextTechLab/TheSpareRoute/master/GUI%20SCM.png">
+This protocol has been implemented as a smart contract, and has been optimized for the use-case of automobile supply chains. It has been **deployed and tested** on the Ropsten network. The link to that deployed contract can be [found here](https://ropsten.etherscan.io/tx/0x04410d805f46d05dccd69c5e2a6a7c26d76cbf9403c4792658720df9eb93c1d3).
+
 
 <solution>
 As we observe, the problems are both financial (interests, maintenance of accounts) and organisations (central authority => corruption). Blockchains are a unique solution which addresses both these issues. ***Blockchains are a fundamentally new way of not just organising financial capital but also social capital.*** A new way of organising finances and power in rural microfinancial groups.
@@ -39,14 +44,9 @@ __**To solve these problems, we've created an Aadhar-linked digital pan-Indian c
 
 This allows villagers all across India to pool their resources and receive **interest-free microloans** from the network. Blockchain tech enables micro-transactions (which allows for a greater inclusion for poverty-stricken individuals), automatic bookkeeping (no delay or pathy maintenance of ledgers on-chain) in a transparent (all chain transactions are open) manner. We remove the need for a group managing authority (decentralized smart contract). By needing consent from previous members to enter the network and making them accountable for him, **we introduce peer pressure into the network**. This [lowers chances of non-repayment of loans](https://www.microfinancegateway.org/library/microfinance-and-mechanics-solidarity-lending-improving-access-credit-through-innovations).
 
-### Protocol
-1. Manufacture requests parts from OEM.
-2. 
-3. 
-4. 
 
-This protocol has been coded into a smart contract from scratch, specifically for the use-case of automobile supply chains. This protocol has been deployed and tested on the Ropsten network. The link to that deployed contract can be [found here](https://ropsten.etherscan.io/tx/0x04410d805f46d05dccd69c5e2a6a7c26d76cbf9403c4792658720df9eb93c1d3).
-
+### GUI interface of our hack
+<img src="https://raw.githubusercontent.com/SatoshiNextTechLab/TheSpareRoute/master/GUI%20SCM.png">
 
 
 ## Architecture and Tech-stack
