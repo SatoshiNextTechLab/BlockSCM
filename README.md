@@ -30,9 +30,9 @@ The Automobile industry's supply chain is massive logistical arrangment that is 
 ### Protocol
 
 1. Manufacture requests parts from OEM.
-2. OEM provides all the parts that he produces to the network
-3. If the parts are genuine and working Manufacturer pays to the OEM
-4. Then the parts gets added to the car
+2. 
+3. 
+4. 
 
 This protocol has been implemented as a smart contract, and has been optimized for the use-case of automobile supply chains. It has been **deployed and tested** on the Ropsten network. The link to that deployed contract can be [found here](https://ropsten.etherscan.io/tx/0x04410d805f46d05dccd69c5e2a6a7c26d76cbf9403c4792658720df9eb93c1d3).
 
@@ -55,26 +55,14 @@ This allows villagers all across India to pool their resources and receive **int
 
 
 ### Architecture Modules
-##### 1. Add parts
-The OEM uses the function Add parts for adding the produced spare part with its name,quantity,ID and price per unit.
-##### 2. Buy parts show price
-The Automobile Manufacturer finds the price he has to pay by calling this function with the name and number of part he needs.
-##### 3. Use OEM parts
-The Automobile Manufacturer pays money temporarily for the parts only if the parts are found to be genuine.
-##### 4. Pay to OEM
-The OEM can call this function to claim the money for the parts only after 10 hours from the time the Manufacturer pays(if defective products are found the Manufacturer refunds the part).
-##### 5. Part to vehicle
-This function is used to assign the part to the Vehicle in which the part is to be installed.
-##### 6. Check part location
-This function is used to check the vehicle in which the part is installed.
-##### 7. Vehicle assembled
-This function is used to set the vehicle as manufactured completely and ready to be sent to the dealer.
-##### 8. Showroom
-The Dealer and client can get the final vehicle from here.
-
-
-
-
+1. **Add parts** - The OEM uses the function Add parts for adding the produced spare part with its name,quantity,ID and price per unit.
+2. **Buy parts show price** - The Automobile Manufacturer finds the price he has to pay by calling this function with the name and number of part he needs.
+3. **Use OEM parts** - The Automobile Manufacturer pays money temporarily for the parts only if the parts are found to be genuine.
+4. **Pay to OEM** - The OEM can call this function to claim the money for the parts only after 10 hours from the time the Manufacturer pays(if defective products are found the Manufacturer refunds the part).
+5. **Part to vehicle** - This function is used to assign the part to the Vehicle in which the part is to be installed.
+6. **Check part location** - This function is used to check the vehicle in which the part is installed.
+7. **Vehicle assembled** - This function is used to set the vehicle as manufactured completely and ready to be sent to the dealer.
+8. **Showroom** - The Dealer and client can get the final vehicle from here.
 
 ### Tech Stack
 1. Ethereum smart constracts (in solidity)
