@@ -56,22 +56,21 @@ This allows villagers all across India to pool their resources and receive **int
 
 ### Architecture Modules
 ##### 1. Add parts
-Initial members of the network call add_member to add a new person to the network, once they've validated his identity using Aadhar.
+The OEM uses the function Add parts for adding the produced spare part with its name,quantity,ID and price per unit.
 ##### 2. Buy parts show price
-The newly added member must deposit money to the pool to be able to request a loan.
+The Automobile Manufacturer finds the price he has to pay by calling this function with the name and number of part he needs.
 ##### 3. Use OEM parts
-A person can request a loan if 
-  1. He has been validated by 4 existing members
-  2. He has deposited some amount of money
+The Automobile Manufacturer pays money temporarily for the parts only if the parts are found to be genuine.
 ##### 4. Pay to OEM
-All loan request are sorted in increasing order of loan-request amount. Every three months, the money in pool is used to fullfill the maximum number of loan-requests. Any reserve wealth in the pool is re-distributed back to the network. The is the function of pay_loan.
+The OEM can call this function to claim the money for the parts only after 10 hours from the time the Manufacturer pays(if defective products are found the Manufacturer refunds the part).
 ##### 5. Part to vehicle
-
+This function is used to assign the part to the Vehicle in which the part is to be installed.
 ##### 6. Check part location
-
+This function is used to check the vehicle in which the part is installed.
 ##### 7. Vehicle assembled
-
+This function is used to set the vehicle as manufactured completely and ready to be sent to the dealer.
 ##### 8. Showroom
+The Dealer and client can get the final vehicle from here.
 
 
 
