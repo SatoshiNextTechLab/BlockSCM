@@ -484,44 +484,61 @@
 		"type": "fallback"
 	}
 ])
-        var Chain=ChainCont.at("0xd09e2947c3face783c006103d83b4509df209a2a");
-        console.log(Chain);
+var Chain=ChainCont.at("0xd09e2947c3face783c006103d83b4509df209a2a");
+console.log(Chain);
 
-        $("sButton").click($("pName").val(),$("pNo").val(),$("pId").val(),(err,res)=>{
-          if(!err){console.log(res)}
-          else{console.log("Error!")}
-        })
+$("sButton").click($("pName").val(),$("pNo").val(),$("pId").val(),(err,res)=>{
+  if(!err){console.log(res)}
+  else{console.log("Error!")}
+})
 
-        $("rButton").click($("rName").val(),$("rNo").val(),(err,res)=>{
-          if(!err){console.log(res)}
-          else{console.log("Error!")}
-        })
+$("rButton").click($("rName").val(),$("rNo").val(),(err,res)=>{
+  if(!err){console.log(res)}
+  else{console.log("Error!")}
+})
 
-        $("remButton").click($(remP).val(),(err,res)=>{
-          alert(res[0]);
-        })
+$("remButton").click($(remP).val(),(err,res)=>{
+  alert(res[0]);
+})
 
-        var OEMPartEvent=Chain.TheOemAddedAnItem()
+var OEMPartEvent=Chain.TheOemAddedAnItem()
 
-        OEMPartEvent.watch(function(err,res){
-          if(!err){
-            alert("Part :"+ res.args.itemname +"Of :"+res.args.quantityofitem+"Given by:"+res.args.oemaddress)
-          }
-          else{console.log(err)}
-        })
+OEMPartEvent.watch(function(err,res){
+  if(!err){
+    alert("Part :"+ res.args.itemname +"Of :"+res.args.quantityofitem+"Given by:"+res.args.oemaddress)
+  }
+  else{console.log(err)}
+})
 
-        var ManufMoreParts=Chain.TheManufacturerRequestedForMoreParts()
+var ManufMoreParts=Chain.TheManufacturerRequestedForMoreParts()
 
-        ManufMoreParts.watch(function(err,res){
-          if(!err){
-            alert("Manufacturer Requested "+res.args.numberofparts+"Number of "+res.args.nameofpart+" Parts")
-          }
-        })
+ManufMoreParts.watch(function(err,res){
+  if(!err){
+    alert("Manufacturer Requested "+res.args.numberofparts+"Number of "+res.args.nameofpart+" Parts")
+  }
+})
+
+$("vButton").click($("partID1").val(),$("vName").val(),$("vID").val(),function(err,res)=>{})
+
+$("pLocation").click($("partID2").val(),function(err,res)=>{
+  alert("Vehice ID:"+res[0]+"Vehicle Name:"+res[1])
+})
+$("vDone").click($("vID1").val(),function(err,res)=>{
+
+})
+
+var VehicleDone=Chain.TheVehicleIsReadyToBeSendToTheDealer()
+
+VehicleDone.watch(function(err,res){
+  if(!err){
+    alert("Vehicle:"+res.args.thevehicleid+"is to be delivered to Dealer")
+  }
+})
 
 
-        //Will it work?
-            //Enter it later
-        </script>
+//Will it work?
+    //Enter it later
+</script>
 
-  </body>
-  </html>
+</body>
+</html> 
