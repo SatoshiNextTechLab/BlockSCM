@@ -93,7 +93,7 @@ The Dealer and client can get the final vehicle from here.
 
 ##### Steps to compile GUI
 1. clone repo https://github.com/jangidkrishna/0xSHG.git
-2. cd into 0xSHG-master/GUI
+2. cd into TheSpareRoute-master/GUI
 2. npm install .
 3. gulp serve
 
