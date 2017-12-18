@@ -7,10 +7,12 @@ The Automobile industry's supply chain is massive logistical arrangment that is 
 
 ### The Problem
 1. **Differential Pricing**: Companies prefer keeping their pricings a secret, since this allows them to pay lower prices when outsourcing to developing countries.
-2. **Numerous parties invovled**: Mediating between so many parties can be a big problem for logistics-providers, slowing down the delivery of services and creating a large overhead for logistics. Furthermore, a centralized mediator of these parties can misuse power to perfer some parties over others.
+2. **Numerous Parties Invovled**: Mediating between so many parties can be a big problem for logistics-providers, slowing down the delivery of services and creating a large overhead for logistics. Furthermore, a centralized mediator of these parties can misuse power to perfer some parties over others.
 3. **Quality & Compliance issues**: Procuring a replacement for defective parts is a long-drawn and uncomfortable process.
 4. **Inevitable disruptions**: LEAN "on-demand" manufacturing falls flat in a situations where natural disasters and socio-economic problems are common. For example, Japan (frequently affected by earthquakes) has outsourced most of it's supply chain logistics to other countries.
 7. **Centralization**: A central mediator for parties is required, which centralizes power in the hands of a few and is a gateway to misuse of resources.
+8. **Fraud by Middlemen**: As number of interacting parties increase, there is a proportional increase in middlemen. They lead to fraud and slow down the supply without adding anything to the network.
+9. **Tracking history of any product**: 
 
 ### How can blockchains help?
 
@@ -22,10 +24,11 @@ The Automobile industry's supply chain is massive logistical arrangment that is 
 | Inevitable disruptions | Digital ledger is free of geographical constraints like natural disasters, socio-economic issues |           
 | Procuring replacements for defective pieces | Smart contract only lets out payments once both parties satisified |
 | Centralization | Risk of fraud is mitigated by using decentralized nodes for checking delivery status |
+| Fraud by Middlemen | Because of using doubly-signed smart contracts, no financial fraud by middlemen can occur in the system |
+| Tracking supply-chain history of each part | Using our network's merkle trees we can verify vendor identity and validity of product |
 
 
-<img src="https://raw.githubusercontent.com/SatoshiNextTechLab/TheSpareRoute/master/GUI%20SCM.pngg">
-
+<img src="https://raw.githubusercontent.com/SatoshiNextTechLab/TheSpareRoute/master/GUI%20SCM.png">
 
 <solution>
 As we observe, the problems are both financial (interests, maintenance of accounts) and organisations (central authority => corruption). Blockchains are a unique solution which addresses both these issues. ***Blockchains are a fundamentally new way of not just organising financial capital but also social capital.*** A new way of organising finances and power in rural microfinancial groups.
@@ -35,10 +38,10 @@ __**To solve these problems, we've created an Aadhar-linked digital pan-Indian c
 This allows villagers all across India to pool their resources and receive **interest-free microloans** from the network. Blockchain tech enables micro-transactions (which allows for a greater inclusion for poverty-stricken individuals), automatic bookkeeping (no delay or pathy maintenance of ledgers on-chain) in a transparent (all chain transactions are open) manner. We remove the need for a group managing authority (decentralized smart contract). By needing consent from previous members to enter the network and making them accountable for him, **we introduce peer pressure into the network**. This [lowers chances of non-repayment of loans](https://www.microfinancegateway.org/library/microfinance-and-mechanics-solidarity-lending-improving-access-credit-through-innovations).
 
 ### Protocol
-1. Manufacture requests parts from OEM
+1. Manufacture requests parts from OEM.
 2. 
-3. Every person who receives a loan, has 3 months to pay back his loan. 
-4. Failure to do so will mean 4 members accountable for that person (shown in video) will either make him pay or split the debt, thus creating an incentive for the four members to keep the person accountable.
+3. 
+4. 
 
 This protocol has been coded into a smart contract from scratch, specifically for the use-case of automobile supply chains. This protocol has been deployed and tested on the Ropsten network. The link to that deployed contract can be [found here](https://ropsten.etherscan.io/tx/0x04410d805f46d05dccd69c5e2a6a7c26d76cbf9403c4792658720df9eb93c1d3).
 
