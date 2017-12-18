@@ -104,7 +104,7 @@ contract SomeContract {
 
   }
 
-  //takes name and id of the part and tells weather it is genuine or not if returns 1 it is genuine
+  //modiier takes name and id of the part and tells weather it is genuine
   modifier auth_part(bytes32 name, uint id_item) {
 
     uint  time_created=time_mapping[name];
@@ -121,7 +121,7 @@ contract SomeContract {
 
   uint pooltime;
 
-  // till now it is used to remove the number of a specific item in the oems manufactured list
+  // used to calculate money for desired part from oem
   function buy_part_amount_show (bytes32 name_of_part , uint how_many) constant returns(uint) {
 
     uint amount = how_many * price_mapping[name_of_part];
