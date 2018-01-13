@@ -78,4 +78,4 @@ This protocol has been implemented as a smart contract, and has been optimized f
 3. npm install lite-server --save-dev
 3. npm run dev
 
-## Built by undergraduates at [Next Tech Lab, SRM University](http://nextech.io/index2.html)
+## Built by undergraduates at [Next Tech Lab, SRM Institute of Science and Technology](http://nextech.io/index2.html)
